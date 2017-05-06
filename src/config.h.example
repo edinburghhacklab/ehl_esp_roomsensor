@@ -1,0 +1,12 @@
+const char* ssid = "Hacklab";
+const char* password = "...";
+const char* room_id = "test";
+const char* mqtt_server = "mqtt";
+const unsigned int mqtt_port = 1883;
+const char* mqtt_temperature_topic = "sensor/test/temperature/%s";
+const char* mqtt_pir_topic = "sensor/test/pir";
+const bool pir_active_low = false;
+const bool ota_enabled = false;
+const char* ota_password = "...";
+const int pir_interval = 5000;
+const int temperature_interval = 10000;
