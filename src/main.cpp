@@ -157,6 +157,7 @@ void loop()
     if (mqtt.connect(mqtt_id)) {
       Serial.println("MQTT connected");
       mqtt.subscribe("meta/mqtt-agents/poll");
+      mqtt.publish("meta/mqtt-agents/announce", my_id);
     } else {
       Serial.println("MQTT connection failed");
       delay(2000);
