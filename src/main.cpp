@@ -143,8 +143,12 @@ void loop()
     Serial.println("...");
     WiFi.begin(ssid, password);
 
+    unsigned long begin_started = millis();
     while (WiFi.status() != WL_CONNECTED) {
-      delay(1);
+      delay(10);
+      if (millis() - begin_started > 60000) {
+        ESP.restart();
+      }
     }
     Serial.println("WiFi connected");
   }
