@@ -6,6 +6,7 @@ const unsigned int mqtt_port = 1883;
 const char* mqtt_temperature_topic = "sensor/test/temperature/%s";
 const char* mqtt_pir_topic = "sensor/test/pir";
 const bool pir_active_low = false;
+const bool pir_pullup = pir_active_low;
 const bool ota_enabled = false;
 const char* ota_password = "...";
 const int pir_interval = 5000;

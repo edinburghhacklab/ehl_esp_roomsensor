@@ -63,7 +63,7 @@ void setup()
 {
   char device_address_string[17];
 
-  if (pir_active_low) {
+  if (pir_pullup) {
     pinMode(pir_pin, INPUT_PULLUP);
   } else {
     pinMode(pir_pin, INPUT);
