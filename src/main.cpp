@@ -15,8 +15,14 @@ extern "C" {
 #define MAX_TOPIC_LENGTH 50
 #define MAX_PAYLOAD_LENGTH 10
 
+#if 1
 const int onewire_pin = 5;
 const int pir_pin = 14;
+#else
+// G14
+const int onewire_pin = 13;
+const int pir_pin = 4;
+#endif
 
 char my_id[40];
 char mqtt_id[24];
